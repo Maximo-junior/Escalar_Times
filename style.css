@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(12, 128, 8);
+}
+
+h1 {
+  color: #1400cc;
+  font-weight: bold;
+  text-align: center;
+  font-size: 25px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 6px;
+  width: 35%;
+  position: relative;
+  margin-left: 32%;
+  margin-top: 2%;
+  padding-top: 10px;
+  background-color: rgb(251, 255, 0);
+
+  border: 1px solid transparent;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #ffffff,
+    #00ff00,
+    #0000ff,
+    #ff00ff,
+    #eeff00
+  );
+  background-size: 400% 400%;
+  animation: gradientBorder 2s infinite;
+  border-radius: 5px;
+}
+
+@keyframes gradientBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+main {
+  width: 250px;
+  display: -moz-grid-group;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 0 1.5rem 2.5rem;
+  position: absolute;
+}
+
+input {
+  border-radius: 4px;
+  margin: 0;
+  padding: 8px;
+  color: #fd0000;
+  font-weight: bold;
+  border: 1px solid #180ea3;
+  font-family: sans-serif;
+}
+
+button {
+  border-radius: 4px;
+  margin: 0;
+  padding: 8px;
+  color: #ffffff;
+  border: 2px solid #200488;
+  background-color: #0077cc;
+  cursor: pointer;
+  margin-top: 3px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #12cf5b;
+  color: #ffffff;
+}
+
+label {
+  font-size: 20px;
+}
